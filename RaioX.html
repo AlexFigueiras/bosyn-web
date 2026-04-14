@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOSYN Raio-X</title>
+    <link rel="stylesheet" href="theme-tokens.css">
+    <link rel="stylesheet" href="RaioX.css">
+</head>
+<body>
+    <section class="raio-x-section">
+        <div class="raio-x-container" id="raioXContainer">
+            <!-- Imagem A: Fundo (Travertino) -->
+            <div class="image-layer image-a">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Ambiente em Mármore Travertino">
+            </div>
+
+            <!-- Imagem B: Sobreposição (Raio-X / Desenho Técnico) -->
+            <div class="image-layer image-b" id="imageB">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Raio-X Técnico">
+            </div>
+
+            <!-- Slider Interativo -->
+            <input type="range" min="0" max="100" value="50" class="raio-x-slider" id="raioXSlider">
+            
+            <!-- Handle Customizado (Visual Only) -->
+            <div class="slider-handle" id="sliderHandle">
+                <div class="handle-circle"></div>
+                <div class="handle-line"></div>
+            </div>
+        </div>
+
+        <div class="raio-x-content">
+            <h2 class="raio-x-title">O Raio-X da Obra</h2>
+            <p class="raio-x-copy">Isso é estabilidade. Sincronizamos a infraestrutura para que o design seja eterno.</p>
+        </div>
+    </section>
+
+    <script src="RaioX.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Autoridade -->
+    <title>BOSYN | Arquitetura de Alto Padrão e Engenharia Tecnológica em Presidente Prudente</title>
+    <meta name="description" content="Sincronização entre design e execução. Projetos arquitetônicos, engenharia rigorosa e tecnologia de ponta para ambientes de alto padrão.">
+    
+    <!-- Design System & Components -->
+    <link rel="stylesheet" href="theme-tokens.css">
+    <link rel="stylesheet" href="Hero.css">
+    <link rel="stylesheet" href="Manifesto.css">
+    <link rel="stylesheet" href="RaioX.css">
+    <link rel="stylesheet" href="Verticais.css">
+    <link rel="stylesheet" href="CTA.css">
+
+    <style>
+        /* Estilos globais adicionais para unificação */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-offwhite);
+            color: var(--text-charcoal);
+        }
+
+        section {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        /* Footer Técnico */
+        .footer-tecnico {
+            background-color: var(--bg-offwhite);
+            padding: var(--space-2xl) var(--space-xl);
+            border-top: 1px solid rgba(11, 12, 13, 0.05);
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-address {
+            font-family: var(--font-family-data);
+            font-size: 0.75rem;
+            color: var(--text-charcoal);
+            opacity: 0.6;
+            margin-bottom: var(--space-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .footer-legal {
+            font-family: var(--font-family-data);
+            font-size: 0.75rem;
+            color: var(--text-charcoal);
+            opacity: 0.5;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <section id="hero">
+        <div class="hero">
+            <div class="hero-container">
+                <div class="monogram-wrapper">
+                    <svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0" y="0" width="20" height="20" fill="var(--black-logo)" />
+                        <rect x="24" y="0" width="20" height="20" fill="var(--black-logo)" />
+                        <rect x="0" y="24" width="20" height="20" fill="var(--black-logo)" />
+                        <rect x="24" y="24" width="20" height="20" fill="var(--black-logo)" />
+                        <rect x="48" y="24" width="20" height="20" fill="var(--black-logo)" />
+                        <rect x="0" y="48" width="20" height="20" fill="var(--black-logo)" />
+                        <rect x="24" y="48" width="20" height="20" fill="var(--black-logo)" />
+                    </svg>
+                </div>
+                <div class="brand-name">BOSYN</div>
+                <h1 class="hero-title">Inteligência em cada camada.</h1>
+                <p class="hero-description">Não apenas construímos espaços. Sincronizamos tecnologia, design e engenharia.</p>
+            </div>
+            <div class="tech-accent"></div>
+        </div>
+    </section>
+
+    <!-- MANIFESTO SECTION -->
+    <section id="manifesto">
+        <div class="manifesto-section">
+            <div class="manifesto-grid">
+                <article class="manifesto-col">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" class="minimal-icon"><rect x="6" y="6" width="12" height="12" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </div>
+                    <h2 class="col-title">BUILD</h2>
+                    <p class="col-content">A materialização do bit em átomo. Execução rigorosa com materiais nobres.</p>
+                </article>
+                <article class="manifesto-col">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" class="minimal-icon"><circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </div>
+                    <h2 class="col-title">ORGANIZE</h2>
+                    <p class="col-content">Gestão de fluxo, cronograma e processos Kaizen aplicado à construção.</p>
+                </article>
+                <article class="manifesto-col">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" class="minimal-icon"><path d="M12 6L18 16.5H6L12 6Z" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </div>
+                    <h2 class="col-title">SYNCHRONIZE</h2>
+                    <p class="col-content">A camada Tech. Projetos que conversam entre si e automação digital.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- RAIO-X SECTION -->
+    <section id="raio-x">
+        <div class="raio-x-section">
+            <div class="raio-x-container">
+                <div class="image-layer image-a">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Ambiente em Mármore Travertino">
+                </div>
+                <div class="image-layer image-b" id="imageB">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Raio-X Técnico">
+                </div>
+                <input type="range" min="0" max="100" value="50" class="raio-x-slider" id="raioXSlider">
+                <div class="slider-handle" id="sliderHandle">
+                    <div class="handle-circle"></div>
+                    <div class="handle-line"></div>
+                </div>
+            </div>
+            <div class="raio-x-content">
+                <h2 class="raio-x-title">O Raio-X da Obra</h2>
+                <p class="raio-x-copy">Isso é estabilidade. Sincronizamos a infraestrutura para que o design seja eterno.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- VERTICAIS SECTION -->
+    <section id="verticais">
+        <div class="verticais-section">
+            <div class="verticais-grid">
+                <div class="vertical-card">
+                    <span class="card-tag">BOSYN Studio</span>
+                    <p class="card-text">Projetos Arquitetônicos: Onde a estética de alto padrão encontra a viabilidade técnica.</p>
+                </div>
+                <div class="vertical-card">
+                    <span class="card-tag">BOSYN Build</span>
+                    <p class="card-text">Construção e Engenharia: A força bruta do aço guiada pela precisão do detalhamento.</p>
+                </div>
+                <div class="vertical-card">
+                    <span class="card-tag">BOSYN Tech</span>
+                    <p class="card-text">Tecnologia e Automação: Sistemas que sentem, protegem e evoluem.</p>
+                </div>
+                <div class="vertical-card">
+                    <span class="card-tag">BOSYN Academy</span>
+                    <p class="card-text">Formação e Método: Nosso padrão de excelência como conhecimento compartilhado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section id="cta">
+        <div class="cta-section">
+            <div class="cta-container">
+                <a href="https://wa.me/551881290642?text=Olá,%20vim%20pelo%20site,%20quero%20mais%20informações." target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                    <button class="cta-button">Sincronize seu próximo projeto</button>
+                </a>
+                <p class="cta-microcopy">Fale com um especialista técnico, não com um vendedor.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER TÉCNICO -->
+    <footer class="footer-tecnico">
+        <div class="footer-container">
+            <p class="footer-address">Rua Sete de Setembro, 663 - Presidente Prudente, SP</p>
+            <p class="footer-legal">BOSYN Group © 2026 | Protocolo de Rigor Técnico</p>
+        </div>
+    </footer>
+
+    <!-- Scripts de Sincronia -->
+    <script src="RaioX.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+/* 
+  BOSYN Hero Styles
+  Integrated with theme-tokens.css
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-offwhite);
+    -webkit-font-smoothing: antialiased;
+}
+
+.hero {
+    position: relative;
+    background-color: var(--bg-offwhite);
+    background-image: var(--bg-gradient-none); /* Golden Rule: No gradients */
+    padding: 160px var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-container {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.monogram-wrapper {
+    margin-bottom: var(--space-xl);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-name {
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-title);
+    color: var(--black-logo);
+    font-size: 1.25rem;
+    letter-spacing: 0.5em; /* Expanded letter-spacing */
+    text-transform: uppercase;
+    margin-bottom: var(--space-xl);
+    padding-left: 0.5em; /* Counterbalance letter-spacing to center properly */
+}
+
+.hero-title {
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-title);
+    color: var(--text-charcoal);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: var(--space-lg);
+}
+
+.hero-description {
+    font-family: var(--font-family-body);
+    font-weight: var(--font-weight-body-regular);
+    color: var(--text-charcoal);
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 600px;
+    opacity: 0.9;
+}
+
+/* Acento Tech */
+.tech-accent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--accent-neon);
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 120px var(--space-md);
+    }
+}

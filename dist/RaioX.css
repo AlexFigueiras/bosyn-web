@@ -1,0 +1,133 @@
+/* 
+  BOSYN Raio-X Component Styles
+  Interactive Before/After Slider
+*/
+
+.raio-x-section {
+    background-color: var(--bg-offwhite);
+    padding: var(--space-4xl) var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xl);
+}
+
+.raio-x-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    aspect-ratio: 1200 / 800;
+    border-radius: var(--radius-interactive); /* Regra de Ouro: 4px */
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.image-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.image-layer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Imagem B: Efeito Raio-X Técnico em var(--accent-neon) */
+.image-b {
+    z-index: 2;
+    clip-path: inset(0 50% 0 0); /* Controlado pelo JS */
+    filter: invert(1) grayscale(1) brightness(0.8) sepia(1) hue-rotate(150deg) saturate(15);
+}
+
+/* Slider Input Reset */
+.raio-x-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    margin: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    cursor: ew-resize;
+}
+
+.raio-x-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 40px;
+    height: 100%;
+    background: transparent;
+}
+
+.raio-x-slider::-moz-range-thumb {
+    width: 40px;
+    height: 100%;
+    background: transparent;
+    border: none;
+}
+
+/* Handle Visual Customizado */
+.slider-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: var(--black-logo);
+    z-index: 5;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+.handle-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: var(--black-logo);
+    border: 2px solid var(--accent-neon);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Linha vertical fina no círculo */
+.handle-line {
+    width: 1px;
+    height: 16px;
+    background-color: var(--accent-neon);
+}
+
+/* Conteúdo de Texto */
+.raio-x-content {
+    text-align: center;
+    max-width: 600px;
+    margin-top: var(--space-lg);
+}
+
+.raio-x-title {
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-title);
+    color: var(--text-charcoal);
+    font-size: 2rem;
+    margin-bottom: var(--space-md);
+}
+
+.raio-x-copy {
+    font-family: var(--font-family-body);
+    font-weight: var(--font-weight-body-regular);
+    color: var(--text-charcoal);
+    font-size: 1.15rem;
+    line-height: 1.6;
+    opacity: 0.85;
+}
