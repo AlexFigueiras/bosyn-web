@@ -34,6 +34,11 @@
     box-shadow: 0 12px 24px rgba(0, 240, 255, 0.05);
 }
 
+a.vertical-card {
+    text-decoration: none;
+    color: inherit;
+}
+
 .card-tag {
     font-family: var(--font-family-data);
     font-weight: var(--font-weight-data);
