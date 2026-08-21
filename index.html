@@ -1,189 +1,911 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO & Autoridade -->
-    <title>BOSYN | Arquitetura de Alto Padrão e Engenharia Tecnológica em Presidente Prudente</title>
-    <meta name="description" content="Sincronização entre design e execução. Projetos arquitetônicos, engenharia rigorosa e tecnologia de ponta para ambientes de alto padrão.">
+    <!-- SEO & Metadados de Autoridade -->
+    <title>BOSYN | Build • Organize • Synchronize | Holding & Ecossistema de Soluções</title>
+    <meta name="description" content="A BOSYN cria tecnologia que integra, organiza e sincroniza dados e processos para impulsionar negócios e melhorar vidas. Conheça as soluções Connectase e Gestão Arq.">
+    <meta name="keywords" content="BOSYN, Connectase, Gestão Arq, Healthtech, SaaS Clinico, Software Arquitetura, Holding de Tecnologia, Presidente Prudente">
+    <meta name="author" content="BOSYN Group">
     
-    <!-- Design System & Components -->
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:title" content="BOSYN | Build • Organize • Synchronize">
+    <meta property="og:description" content="Um ecossistema de soluções que se conectam para transformar o presente e construir o futuro.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bosyn.com.br">
+
+    <!-- Favicon SVG oficial BOSYN -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='fav' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2320D5EF'/><stop offset='50%25' stop-color='%23087E98'/><stop offset='100%25' stop-color='%231B3B6F'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='%23060E18'/><path d='M30 22 C30 18, 52 18, 62 25 C72 32, 72 44, 60 48 C74 52, 74 68, 62 75 C50 82, 30 82, 30 78 Z' fill='none' stroke='url(%23fav)' stroke-width='10' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+
+    <!-- Design Tokens & Component Stylesheets -->
     <link rel="stylesheet" href="theme-tokens.css">
-    <link rel="stylesheet" href="Hero.css">
-    <link rel="stylesheet" href="Manifesto.css">
-    <link rel="stylesheet" href="RaioX.css">
-    <link rel="stylesheet" href="Verticais.css">
-    <link rel="stylesheet" href="CTA.css">
-
-    <style>
-        /* Estilos globais adicionais para unificação */
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-offwhite);
-            color: var(--text-charcoal);
-        }
-
-        section {
-            width: 100%;
-            overflow: hidden;
-        }
-
-        /* Footer Técnico */
-        .footer-tecnico {
-            background-color: var(--bg-offwhite);
-            padding: var(--space-2xl) var(--space-xl);
-            border-top: 1px solid rgba(11, 12, 13, 0.05);
-            text-align: center;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-address {
-            font-family: var(--font-family-data);
-            font-size: 0.75rem;
-            color: var(--text-charcoal);
-            opacity: 0.6;
-            margin-bottom: var(--space-sm);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .footer-legal {
-            font-family: var(--font-family-data);
-            font-size: 0.75rem;
-            color: var(--text-charcoal);
-            opacity: 0.5;
-            letter-spacing: 0.05em;
-        }
-    </style>
+    <link rel="stylesheet" href="app.css">
 </head>
 <body>
 
-    <!-- HERO SECTION -->
-    <section id="hero">
-        <div class="hero">
-            <div class="hero-container">
-                <div class="monogram-wrapper">
-                    <svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0" y="0" width="20" height="20" fill="var(--black-logo)" />
-                        <rect x="24" y="0" width="20" height="20" fill="var(--black-logo)" />
-                        <rect x="0" y="24" width="20" height="20" fill="var(--black-logo)" />
-                        <rect x="24" y="24" width="20" height="20" fill="var(--black-logo)" />
-                        <rect x="48" y="24" width="20" height="20" fill="var(--black-logo)" />
-                        <rect x="0" y="48" width="20" height="20" fill="var(--black-logo)" />
-                        <rect x="24" y="48" width="20" height="20" fill="var(--black-logo)" />
-                    </svg>
+    <!-- ====================================================================
+         1. NAVBAR / HEADER INSTITUCIONAL
+         ==================================================================== -->
+    <header class="navbar-header" id="navbarHeader">
+        <div class="nav-container">
+            <!-- Brand Logo Oficial BOSYN -->
+            <a href="#hero" class="brand-logo-link" aria-label="BOSYN Home">
+                <svg class="logo-symbol-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGrad" x1="10%" y1="0%" x2="90%" y2="100%">
+                            <stop offset="0%" stop-color="#20D5EF"/>
+                            <stop offset="55%" stop-color="#087E98"/>
+                            <stop offset="100%" stop-color="#1B3B6F"/>
+                        </linearGradient>
+                        <filter id="logoGlow" x="-20%" y="-20%" width="140%" height="140%">
+                            <feGaussianBlur stdDeviation="3" result="glow"/>
+                            <feComposite in="SourceGraphic" in2="glow" operator="over"/>
+                        </filter>
+                    </defs>
+                    <!-- Símbolo Ribbon B Estilizado e Contínuo -->
+                    <rect x="5" y="5" width="110" height="110" rx="28" fill="#0B1726" stroke="rgba(32, 213, 239, 0.3)" stroke-width="2"/>
+                    <path d="M36 28 H62 C74 28 82 36 82 46 C82 54 75 60 66 62 C77 64 86 71 86 82 C86 92 76 100 62 100 H36 C32 100 30 96 30 92 V36 C30 32 32 28 36 28 Z" 
+                          fill="none" 
+                          stroke="url(#logoGrad)" 
+                          stroke-width="11" 
+                          stroke-linecap="round" 
+                          stroke-linejoin="round"
+                          filter="url(#logoGlow)"/>
+                    <path d="M42 45 H60 C64 45 68 48 68 52 C68 56 64 59 60 59 H42 V45 Z" fill="none" stroke="#20D5EF" stroke-width="4" opacity="0.6"/>
+                    <path d="M42 69 H62 C67 69 71 72 71 77 C71 82 67 85 62 85 H42 V69 Z" fill="none" stroke="#087E98" stroke-width="4" opacity="0.6"/>
+                </svg>
+                <div class="brand-text-block">
+                    <span class="brand-main-title">BOSYN</span>
+                    <span class="brand-subtitle-tag">BUILD • ORGANIZE • SYNCHRONIZE</span>
                 </div>
-                <div class="brand-name">BOSYN</div>
-                <h1 class="hero-title">Inteligência em cada camada.</h1>
-                <p class="hero-description">Não apenas construímos espaços. Sincronizamos tecnologia, design e engenharia.</p>
-            </div>
-            <div class="tech-accent"></div>
-        </div>
-    </section>
+            </a>
 
-    <!-- MANIFESTO SECTION -->
-    <section id="manifesto">
-        <div class="manifesto-section">
-            <div class="manifesto-grid">
-                <article class="manifesto-col">
-                    <div class="icon-wrapper">
-                        <svg viewBox="0 0 24 24" fill="none" class="minimal-icon"><rect x="6" y="6" width="12" height="12" stroke="currentColor" stroke-width="1.5"/></svg>
-                    </div>
-                    <h2 class="col-title">BUILD</h2>
-                    <p class="col-content">A materialização do bit em átomo. Execução rigorosa com materiais nobres.</p>
-                </article>
-                <article class="manifesto-col">
-                    <div class="icon-wrapper">
-                        <svg viewBox="0 0 24 24" fill="none" class="minimal-icon"><circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="1.5"/></svg>
-                    </div>
-                    <h2 class="col-title">ORGANIZE</h2>
-                    <p class="col-content">Gestão de fluxo, cronograma e processos Kaizen aplicado à construção.</p>
-                </article>
-                <article class="manifesto-col">
-                    <div class="icon-wrapper">
-                        <svg viewBox="0 0 24 24" fill="none" class="minimal-icon"><path d="M12 6L18 16.5H6L12 6Z" stroke="currentColor" stroke-width="1.5"/></svg>
-                    </div>
-                    <h2 class="col-title">SYNCHRONIZE</h2>
-                    <p class="col-content">A camada Tech. Projetos que conversam entre si e automação digital.</p>
-                </article>
-            </div>
-        </div>
-    </section>
+            <!-- Menu de Navegação -->
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#filosofia" class="nav-link-item">Filosofia</a></li>
+                    <li><a href="#solucoes-saas" class="nav-link-item">Soluções SaaS</a></li>
+                    <li><a href="#pilares" class="nav-link-item">Pilares</a></li>
+                    <li><a href="#setores" class="nav-link-item">Setores</a></li>
+                    <li><a href="#ecossistema" class="nav-link-item">Ecossistema</a></li>
+                    <li><a href="#contato" class="nav-link-item">Contato</a></li>
+                </ul>
+            </nav>
 
-    <!-- RAIO-X SECTION -->
-    <section id="raio-x">
-        <div class="raio-x-section">
-            <div class="raio-x-container">
-                <div class="image-layer image-a">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Ambiente em Mármore Travertino">
-                </div>
-                <div class="image-layer image-b" id="imageB">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Raio-X Técnico">
-                </div>
-                <input type="range" min="0" max="100" value="50" class="raio-x-slider" id="raioXSlider">
-                <div class="slider-handle" id="sliderHandle">
-                    <div class="handle-circle"></div>
-                    <div class="handle-line"></div>
-                </div>
-            </div>
-            <div class="raio-x-content">
-                <h2 class="raio-x-title">O Raio-X da Obra</h2>
-                <p class="raio-x-copy">Isso é estabilidade. Sincronizamos a infraestrutura para que o design seja eterno.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- VERTICAIS SECTION -->
-    <section id="verticais">
-        <div class="verticais-section">
-            <div class="verticais-grid">
-                <div class="vertical-card">
-                    <span class="card-tag">BOSYN Studio</span>
-                    <p class="card-text">Projetos Arquitetônicos: Onde a estética de alto padrão encontra a viabilidade técnica.</p>
-                </div>
-                <div class="vertical-card">
-                    <span class="card-tag">BOSYN Build</span>
-                    <p class="card-text">Construção e Engenharia: A força bruta do aço guiada pela precisão do detalhamento.</p>
-                </div>
-                <div class="vertical-card">
-                    <span class="card-tag">BOSYN Tech</span>
-                    <p class="card-text">Tecnologia e Automação: Sistemas que sentem, protegem e evoluem.</p>
-                </div>
-                <div class="vertical-card">
-                    <span class="card-tag">BOSYN Academy</span>
-                    <p class="card-text">Formação e Método: Nosso padrão de excelência como conhecimento compartilhado.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA SECTION -->
-    <section id="cta">
-        <div class="cta-section">
-            <div class="cta-container">
-                <a href="https://wa.me/551881290642?text=Olá,%20vim%20pelo%20site,%20quero%20mais%20informações." target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
-                    <button class="cta-button">Sincronize seu próximo projeto</button>
+            <!-- CTA Header -->
+            <div class="nav-cta-wrap">
+                <a href="#contato" class="nav-cta-btn">
+                    <span>Falar com o Grupo</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
-                <p class="cta-microcopy">Fale com um especialista técnico, não com um vendedor.</p>
+            </div>
+
+            <!-- Botão Mobile -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir Menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" y1="6" x2="20" y2="6"></line>
+                    <line x1="4" y1="12" x2="20" y2="12"></line>
+                    <line x1="4" y1="18" x2="20" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- ====================================================================
+         2. HERO SECTION COM REDE TECNOLÓGICA & NARRATIVA INSTITUCIONAL
+         ==================================================================== -->
+    <section class="hero-section" id="hero">
+        <canvas class="hero-network-canvas" id="heroNetworkCanvas"></canvas>
+        <div class="hero-glow-overlay"></div>
+
+        <div class="hero-container">
+            <!-- Hero Left Content -->
+            <div class="hero-content">
+                <div class="hero-badge-pill">
+                    <span class="hero-badge-dot"></span>
+                    <span class="hero-badge-text">BOSYN GROUP • BUILD • ORGANIZE • SYNCHRONIZE</span>
+                </div>
+
+                <h1 class="hero-headline">
+                    Construímos negócios com <span class="hero-headline-gradient">visão de longo prazo.</span>
+                </h1>
+
+                <p class="hero-description">
+                    A BOSYN cria tecnologia que integra, organiza e sincroniza pessoas, dados e processos para construir soluções inteligentes e transformar setores essenciais em valor sustentável.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#solucoes-saas" class="btn-primary-hero">
+                        <span>Explorar Soluções SaaS</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#filosofia" class="btn-secondary-hero">
+                        <span>Nosso Padrão</span>
+                    </a>
+                </div>
+
+                <div class="hero-metrics-grid">
+                    <div class="hero-metric-item">
+                        <span class="hero-metric-number">100%</span>
+                        <span class="hero-metric-label">Padrão de Rigor & Governança</span>
+                    </div>
+                    <div class="hero-metric-item">
+                        <span class="hero-metric-number">SaaS</span>
+                        <span class="hero-metric-label">Soluções Verticais Especializadas</span>
+                    </div>
+                    <div class="hero-metric-item">
+                        <span class="hero-metric-number">Real-Time</span>
+                        <span class="hero-metric-label">Sincronização & Inteligência</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Right Visual Card (Active Ecosystem Hologram) -->
+            <div class="hero-visual-wrapper">
+                <div class="hero-interactive-card">
+                    <div class="hero-card-header">
+                        <div class="hero-card-title-group">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#20D5EF" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></svg>
+                            <span style="font-weight: 700; color: #FFFFFF; font-size: 0.95rem;">Ecossistema BOSYN</span>
+                        </div>
+                        <div class="hero-card-status-badge">
+                            <span class="live-indicator-dot"></span>
+                            <span>Operações Ativas</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-card-ecosystem-list">
+                        <!-- Node 1: Connectase -->
+                        <div class="hero-eco-node">
+                            <div class="eco-node-left">
+                                <div class="eco-node-icon-box health">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                                </div>
+                                <div>
+                                    <div class="eco-node-name">CONNECTASE</div>
+                                    <div class="eco-node-meta">Healthtech & SaaS Clínico</div>
+                                </div>
+                            </div>
+                            <span class="eco-node-badge">A BOSYN Company</span>
+                        </div>
+
+                        <!-- Node 2: Gestão Arq -->
+                        <div class="hero-eco-node">
+                            <div class="eco-node-left">
+                                <div class="eco-node-icon-box arch">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4 6 4v14M8 11h2M8 15h2M14 11h2M14 15h2"/></svg>
+                                </div>
+                                <div>
+                                    <div class="eco-node-name">GESTÃO ARQ</div>
+                                    <div class="eco-node-meta">SaaS para Escritórios de Arquitetura</div>
+                                </div>
+                            </div>
+                            <span class="eco-node-badge">A BOSYN Company</span>
+                        </div>
+
+                        <!-- Node 3: Holding & Governance Core -->
+                        <div class="hero-eco-node">
+                            <div class="eco-node-left">
+                                <div class="eco-node-icon-box gov">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                </div>
+                                <div>
+                                    <div class="eco-node-name">BOSYN Holding & Venture Hub</div>
+                                    <div class="eco-node-meta">Engenharia, Dados & Governança</div>
+                                </div>
+                            </div>
+                            <span class="eco-node-badge" style="color: #05945B; border-color: rgba(5, 148, 91, 0.3);">Padrão Ativo</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER TÉCNICO -->
-    <footer class="footer-tecnico">
-        <div class="footer-container">
-            <p class="footer-address">Rua Sete de Setembro, 663 - Presidente Prudente, SP</p>
-            <p class="footer-legal">BOSYN Group © 2026 | Protocolo de Rigor Técnico</p>
+    <!-- ====================================================================
+         3. FILOSOFIA PROPRIETÁRIA (BUILD • ORGANIZE • SYNCHRONIZE)
+         ==================================================================== -->
+    <section class="section-wrapper light-bg" id="filosofia">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Filosofia Proprietária</span>
+                <h2 class="section-title">O Conceito por trás do nome BOSYN</h2>
+                <p class="section-subtitle">
+                    Transformamos a complexidade dos negócios em estruturas sólidas e integradas através de três pilares de execução rigorosa.
+                </p>
+            </div>
+
+            <div class="philosophy-grid">
+                <!-- Pillar 1: BUILD -->
+                <div class="philosophy-card">
+                    <div class="philosophy-icon-wrap">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                    </div>
+                    <span class="philosophy-keyword">01. Pilar de Criação</span>
+                    <h3 class="philosophy-card-title">BUILD</h3>
+                    <p class="philosophy-card-desc">
+                        Construir soluções e produtos que entreguem valor real. Da arquitetura de software de alta resiliência à concepção de modelos de negócio sustentáveis.
+                    </p>
+                    <ul class="philosophy-card-bullet-list">
+                        <li class="philosophy-bullet-item">
+                            <span class="bullet-check-icon">✓</span> Engenharia de software escalável
+                        </li>
+                        <li class="philosophy-bullet-item">
+                            <span class="bullet-check-icon">✓</span> Produtos com entrega concreta de valor
+                        </li>
+                        <li class="philosophy-bullet-item">
+                            <span class="bullet-check-icon">✓</span> Arquitetura técnica de ponta
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 2: ORGANIZE -->
+                <div class="philosophy-card">
+                    <div class="philosophy-icon-wrap">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                    </div>
+                    <span class="philosophy-keyword">02. Pilar de Estrutura</span>
+                    <h3 class="philosophy-card-title">ORGANIZE</h3>
+                    <p class="philosophy-card-desc">
+                        Transformar complexidade em clareza operacional. Modelamos fluxos de dados, processos de governança e interfaces intuitivas para o dia a dia dos profissionais.
+                    </p>
+                    <ul class="philosophy-card-bullet-list">
+                        <li class="philosophy-bullet-item">
+                            <span class="bullet-check-icon">✓</span> Estruturação e modelagem de dados
+                        </li>
+                        <li class="philosophy-bullet-item">
+                            <span class="bullet-check-icon">✓</span> Eliminação de fricção operacional
+                        </li>
+                        <li class="philosophy-bullet-item">
+                            <span class="bullet-check-icon">✓</span> Clareza e precisão em relatórios
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 3: SYNCHRONIZE -->
+                <div class="philosophy-card">
+                    <div class="philosophy-icon-wrap">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+                        </svg>
+                    </div>
+                    <span class="philosophy-keyword">03. Pilar de Integração</span>
+                    <h3 class="philosophy-card-title">SYNCHRONIZE</h3>
+                    <p class="philosophy-card-desc">
+                        Integrar pessoas, processos, tecnologia e execução. Sistemas que conversam entre si e atualizam informações críticas em tempo real sem silos.
+                    </p>
+                    <ul class="philosophy-card-bullet-list">
+                        <li class="philosophy-bullet-item">
+                            <span class="bullet-check-icon">✓</span> Fluxos e automações em tempo real
+                        </li>
+                        <li class="philosophy-bullet-item">
+                            <span class="bullet-check-icon">✓</span> Interoperabilidade entre sistemas
+                        </li>
+                        <li class="philosophy-bullet-item">
+                            <span class="bullet-check-icon">✓</span> Conexão contínua ponta a ponta
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================================
+         4. SOLUÇÕES SAAS EM DESTAQUE (CONNECTASE & GESTÃO ARQ)
+         ==================================================================== -->
+    <section class="section-wrapper white-bg" id="solucoes-saas">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">SaaS Especializados</span>
+                <h2 class="section-title">Sistemas Verticais do Ecossistema</h2>
+                <p class="section-subtitle">
+                    Produtos com identidade própria e foco cirúrgico em suas categorias, respaldados pela infraestrutura e rigor de engenharia BOSYN.
+                </p>
+            </div>
+
+            <!-- Tab Switcher -->
+            <div class="saas-tabs-control">
+                <button class="saas-tab-btn active" data-target="product-connectase">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                    <span>CONNECTASE</span>
+                    <span class="saas-tab-badge">Healthtech</span>
+                </button>
+                <button class="saas-tab-btn" data-target="product-gestaoarq">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4 6 4v14M8 11h2M8 15h2M14 11h2M14 15h2"/></svg>
+                    <span>GESTÃO ARQ</span>
+                    <span class="saas-tab-badge">Arquitetura</span>
+                </button>
+            </div>
+
+            <!-- PRODUTO 1: CONNECTASE -->
+            <div class="saas-product-container active" id="product-connectase">
+                <div class="product-showcase-card">
+                    <div class="product-info-col">
+                        <div class="product-endorsement">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            <span>CONNECTASE — A BOSYN Company</span>
+                        </div>
+                        <h3 class="product-title">CONNECTASE</h3>
+                        <p class="product-tagline">Onde o cuidado se conecta.</p>
+                        <p class="product-description">
+                            Plataforma de gestão e registro clínico para profissionais de saúde registrarem atendimentos, organizarem prontuários dinâmicos, acompanharem pacientes e operarem a continuidade do cuidado com segurança e inteligência.
+                        </p>
+
+                        <div class="product-features-list">
+                            <div class="product-feature-item">
+                                <span class="feature-icon-bullet">✓</span>
+                                <span>Prontuário Clínico Estruturado</span>
+                            </div>
+                            <div class="product-feature-item">
+                                <span class="feature-icon-bullet">✓</span>
+                                <span>Acompanhamento Longitudinal</span>
+                            </div>
+                            <div class="product-feature-item">
+                                <span class="feature-icon-bullet">✓</span>
+                                <span>Conexão Multiprofissional</span>
+                            </div>
+                            <div class="product-feature-item">
+                                <span class="feature-icon-bullet">✓</span>
+                                <span>Rastreabilidade & LGPD</span>
+                            </div>
+                        </div>
+
+                        <div class="product-actions-bar">
+                            <a href="https://wa.me/551881290642?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20conhecer%20a%20plataforma%20CONNECTASE%20Healthtech." target="_blank" rel="noopener noreferrer" class="btn-saas-primary">
+                                <span>Solicitar Demonstração Clínica</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                            <button id="demoAddClinicalNoteBtn" class="btn-saas-secondary">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                                <span>Simular Registro</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Clinical Dashboard Live Preview -->
+                    <div class="product-preview-window">
+                        <div class="mock-window-header">
+                            <div class="mock-window-dots">
+                                <span class="mock-dot red"></span>
+                                <span class="mock-dot yellow"></span>
+                                <span class="mock-dot green"></span>
+                            </div>
+                            <div class="mock-window-title">CONNECTASE Clinical • Painel de Gestão</div>
+                            <span class="mock-window-badge">HIPAA / LGPD Compliant</span>
+                        </div>
+
+                        <div class="mock-dashboard-body">
+                            <div class="mock-stats-row">
+                                <div class="mock-stat-box">
+                                    <div class="mock-stat-label">Pacientes Ativos</div>
+                                    <div class="mock-stat-value cyan">1.482</div>
+                                </div>
+                                <div class="mock-stat-box">
+                                    <div class="mock-stat-label">Sincronia Clínica</div>
+                                    <div class="mock-stat-value green">99.8%</div>
+                                </div>
+                                <div class="mock-stat-box">
+                                    <div class="mock-stat-label">Continuidade</div>
+                                    <div class="mock-stat-value">24/7</div>
+                                </div>
+                            </div>
+
+                            <div class="mock-main-content-panel">
+                                <div class="mock-panel-header">
+                                    <span class="mock-panel-title">Linha do Tempo & Prontuário em Tempo Real</span>
+                                    <span style="font-size: 0.72rem; color: #20D5EF; font-family: var(--font-data);">● Live Sync</span>
+                                </div>
+
+                                <div id="demoClinicalList">
+                                    <div class="mock-interactive-row">
+                                        <div>
+                                            <strong style="color: #FFFFFF; display: block;">Dra. Juliana V. • Cardiologia</strong>
+                                            <span style="font-size: 0.72rem; color: #93B5C6;">Paciente: Marcos A. • Registro Estruturado</span>
+                                        </div>
+                                        <span class="mock-status-tag active">✓ Prontuário Seguro</span>
+                                    </div>
+                                    <div class="mock-interactive-row">
+                                        <div>
+                                            <strong style="color: #FFFFFF; display: block;">Enf. Rodrigo M. • Triagem</strong>
+                                            <span style="font-size: 0.72rem; color: #93B5C6;">Sinais Vitais e Alerta Sincronizado</span>
+                                        </div>
+                                        <span class="mock-status-tag sync">🔄 Sincronizado</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUTO 2: GESTÃO ARQ -->
+            <div class="saas-product-container" id="product-gestaoarq">
+                <div class="product-showcase-card">
+                    <div class="product-info-col">
+                        <div class="product-endorsement">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            <span>GESTÃO ARQ — A BOSYN Company</span>
+                        </div>
+                        <h3 class="product-title">GESTÃO ARQ</h3>
+                        <p class="product-tagline">Estrutura e precisão para escritórios de arquitetura.</p>
+                        <p class="product-description">
+                            Sistema completo desenvolvido para a rotina executiva de arquitetos. Sincronize cronogramas de projeto, precificação por etapas, controle de horas técnicas, entregas e validação com clientes com rigor e clareza.
+                        </p>
+
+                        <div class="product-features-list">
+                            <div class="product-feature-item">
+                                <span class="feature-icon-bullet">✓</span>
+                                <span>Precificação por Etapa</span>
+                            </div>
+                            <div class="product-feature-item">
+                                <span class="feature-icon-bullet">✓</span>
+                                <span>Cronograma Inteligente de Obra</span>
+                            </div>
+                            <div class="product-feature-item">
+                                <span class="feature-icon-bullet">✓</span>
+                                <span>Gestão de Horas & Produtividade</span>
+                            </div>
+                            <div class="product-feature-item">
+                                <span class="feature-icon-bullet">✓</span>
+                                <span>Portal de Aprovação do Cliente</span>
+                            </div>
+                        </div>
+
+                        <div class="product-actions-bar">
+                            <a href="https://wa.me/551881290642?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20conhecer%20o%20sistema%20GEST%C3%83O%20ARQ%20para%20escrit%C3%B3rios%20de%20arquitetura." target="_blank" rel="noopener noreferrer" class="btn-saas-primary">
+                                <span>Agendar Demonstração</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                            <div style="display: flex; gap: 6px;">
+                                <button class="arq-phase-btn btn-saas-secondary" data-phase="ep" style="padding: 10px 14px; font-size: 0.78rem;">Estudo Preliminar</button>
+                                <button class="arq-phase-btn btn-saas-secondary" data-phase="ap" style="padding: 10px 14px; font-size: 0.78rem;">Anteprojeto</button>
+                                <button class="arq-phase-btn btn-saas-secondary" data-phase="ex" style="padding: 10px 14px; font-size: 0.78rem;">Executivo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Architecture Project Dashboard Live Preview -->
+                    <div class="product-preview-window">
+                        <div class="mock-window-header">
+                            <div class="mock-window-dots">
+                                <span class="mock-dot red"></span>
+                                <span class="mock-dot yellow"></span>
+                                <span class="mock-dot green"></span>
+                            </div>
+                            <div class="mock-window-title">GESTÃO ARQ • Controle de Projetos</div>
+                            <span class="mock-window-badge" style="color: #F96E15; background: rgba(249, 110, 21, 0.15);">Edição Pro</span>
+                        </div>
+
+                        <div class="mock-dashboard-body">
+                            <div class="mock-stats-row">
+                                <div class="mock-stat-box">
+                                    <div class="mock-stat-label">Fase Atual</div>
+                                    <div class="mock-stat-value orange" id="arqCurrentPhase" style="font-size: 1rem;">Estudo Preliminar</div>
+                                </div>
+                                <div class="mock-stat-box">
+                                    <div class="mock-stat-label">Progresso da Etapa</div>
+                                    <div class="mock-stat-value green" id="arqPhaseProgress">100% Concluído</div>
+                                </div>
+                                <div class="mock-stat-box">
+                                    <div class="mock-stat-label">Meta Orçamentária</div>
+                                    <div class="mock-stat-value cyan" id="arqBudgetVariance">0.0% Desvio</div>
+                                </div>
+                            </div>
+
+                            <div class="mock-main-content-panel">
+                                <div class="mock-panel-header">
+                                    <span class="mock-panel-title">Residência Alphaville 04 • Cronograma & R.T.</span>
+                                    <span style="font-size: 0.72rem; color: #4ade80; font-family: var(--font-data);">● No Prazo</span>
+                                </div>
+
+                                <div>
+                                    <div class="mock-interactive-row">
+                                        <div>
+                                            <strong style="color: #FFFFFF; display: block;">Detalhamento Hidráulico & Elétrico</strong>
+                                            <span style="font-size: 0.72rem; color: #93B5C6;">Responsável: Arq. Felipe S. • 32h alocadas</span>
+                                        </div>
+                                        <span class="mock-status-tag active">✓ Aprovado</span>
+                                    </div>
+                                    <div class="mock-interactive-row">
+                                        <div>
+                                            <strong style="color: #FFFFFF; display: block;">Compatibilização Estrutural BIM</strong>
+                                            <span style="font-size: 0.72rem; color: #93B5C6;">Integração com Engenharia • 100% Sincronizado</span>
+                                        </div>
+                                        <span class="mock-status-tag sync">🔄 Em Revisão</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================================
+         5. PILARES DA MARCA (CONEXÃO, ORGANIZAÇÃO, SINCRONIZAÇÃO, CONFIANÇA)
+         ==================================================================== -->
+    <section class="section-wrapper dark-bg" id="pilares">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag dark">Fundamentos da Identidade</span>
+                <h2 class="section-title" style="color: #FFFFFF;">Pilares da Marca BOSYN</h2>
+                <p class="section-subtitle dark">
+                    Os quatro eixos fundamentais que guiam cada decisão técnica, produto e negócio incubado em nosso ecossistema.
+                </p>
+            </div>
+
+            <div class="pillars-grid">
+                <!-- Pilar 1: Conexão -->
+                <div class="pillar-card">
+                    <div class="pillar-icon-container">
+                        <!-- Icon Conexão (Link) -->
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                        </svg>
+                    </div>
+                    <h3 class="pillar-title">CONEXÃO</h3>
+                    <div class="pillar-tagline">Integração que aproxima</div>
+                    <p class="pillar-description">
+                        Conectamos profissionais, pessoas, pacientes e parceiros através de plataformas que eliminam barreiras de comunicação.
+                    </p>
+                </div>
+
+                <!-- Pilar 2: Organização -->
+                <div class="pillar-card">
+                    <div class="pillar-icon-container">
+                        <!-- Icon Organização (3D Cubes) -->
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m21 16-9 5-9-5V8l9-5 9 5v8z"/>
+                            <path d="M3.27 6.96 12 12.01l8.73-5.05"/>
+                            <path d="M12 22.08V12"/>
+                        </svg>
+                    </div>
+                    <h3 class="pillar-title">ORGANIZAÇÃO</h3>
+                    <div class="pillar-tagline">Estrutura que gera clareza</div>
+                    <p class="pillar-description">
+                        Arquiteturas de dados limpas e processos intuitivos que transformam fluxos operacionais em tomadas de decisão ágeis.
+                    </p>
+                </div>
+
+                <!-- Pilar 3: Sincronização -->
+                <div class="pillar-card">
+                    <div class="pillar-icon-container">
+                        <!-- Icon Sincronização (Sync arrows) -->
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                            <path d="M3 3v5h5"/>
+                            <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/>
+                            <path d="M16 21h5v-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="pillar-title">SINCRONIZAÇÃO</h3>
+                    <div class="pillar-tagline">Fluxos inteligentes em tempo real</div>
+                    <p class="pillar-description">
+                        Engenharia e automação contínua. Informações que circulam com exatidão e sem atrasos no momento em que são necessárias.
+                    </p>
+                </div>
+
+                <!-- Pilar 4: Confiança -->
+                <div class="pillar-card">
+                    <div class="pillar-icon-container">
+                        <!-- Icon Confiança (Shield with Check) -->
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="m9 12 2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="pillar-title">CONFIANÇA</h3>
+                    <div class="pillar-tagline">Segurança que gera resultados</div>
+                    <p class="pillar-description">
+                        Rigor técnico, privacidade de dados e governança sólida para garantir a perenidade e reputação das nossas soluções.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================================
+         6. SETORES DE ATUAÇÃO
+         ==================================================================== -->
+    <section class="section-wrapper light-bg" id="setores">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Presença & Mercados</span>
+                <h2 class="section-title">Setores de Atuação</h2>
+                <p class="section-subtitle">
+                    A BOSYN aplica sua governança e tecnologia em setores críticos que exigem precisão, continuidade e confiança.
+                </p>
+            </div>
+
+            <div class="sectors-grid">
+                <!-- Setor 1: Saúde -->
+                <div class="sector-card">
+                    <div class="sector-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="sector-name">SAÚDE</h3>
+                    <p class="sector-desc">Healthtechs e sistemas de registro e gestão clínica contínua.</p>
+                </div>
+
+                <!-- Setor 2: Tecnologia -->
+                <div class="sector-card">
+                    <div class="sector-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <rect x="4" y="4" width="16" height="16" rx="2"/>
+                            <rect x="9" y="9" width="6" height="6"/>
+                            <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/>
+                        </svg>
+                    </div>
+                    <h3 class="sector-name">TECNOLOGIA</h3>
+                    <p class="sector-desc">Engenharia de software, cloud architecture e microsserviços.</p>
+                </div>
+
+                <!-- Setor 3: Dados -->
+                <div class="sector-card">
+                    <div class="sector-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                            <path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/>
+                            <path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/>
+                        </svg>
+                    </div>
+                    <h3 class="sector-name">DADOS</h3>
+                    <p class="sector-desc">Estruturação de dados para inteligência analítica e BI.</p>
+                </div>
+
+                <!-- Setor 4: Consultoria -->
+                <div class="sector-card">
+                    <div class="sector-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3 class="sector-name">CONSULTORIA</h3>
+                    <p class="sector-desc">Modelagem de processos e eficiência operacional Kaizen.</p>
+                </div>
+
+                <!-- Setor 5: Inovação -->
+                <div class="sector-card">
+                    <div class="sector-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+                            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+                            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+                            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="sector-name">INOVAÇÃO</h3>
+                    <p class="sector-desc">Incubação e desenvolvimento de novos modelos de negócio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================================
+         7. ARQUITETURA DO ECOSSISTEMA
+         ==================================================================== -->
+    <section class="section-wrapper white-bg" id="ecossistema">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Governança Híbrida</span>
+                <h2 class="section-title">A Arquitetura de Marcas do Grupo</h2>
+                <p class="section-subtitle">
+                    A BOSYN atua como a marca corporativa e selo de padrão de excelência, conferindo autonomia e foco para cada negócio e produto.
+                </p>
+            </div>
+
+            <div class="ecosystem-diagram-card">
+                <div class="ecosystem-flow-wrapper">
+                    <!-- Holding Mother Node -->
+                    <div class="eco-holding-node">
+                        <div style="font-family: var(--font-data); font-size: 0.72rem; color: var(--color-secondary); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 4px;">Holding & Marca Corporativa</div>
+                        <h3 class="eco-holding-title">BOSYN</h3>
+                        <div class="eco-holding-tag">Padrão Corporativo • Capital • Governança • Engenharia de Soluções</div>
+                    </div>
+
+                    <div class="eco-connector-lines">
+                        <div class="connector-line-vertical"></div>
+                    </div>
+
+                    <!-- Independent Ventures Grid -->
+                    <div class="eco-ventures-row">
+                        <!-- Venture 1 -->
+                        <div class="eco-venture-box">
+                            <h4 class="venture-name">CONNECTASE</h4>
+                            <div class="venture-endorser">A BOSYN Company</div>
+                            <p class="venture-desc">Healthtech independente para gestão clínica, prontuários integrados e continuidade do cuidado.</p>
+                        </div>
+
+                        <!-- Venture 2 -->
+                        <div class="eco-venture-box">
+                            <h4 class="venture-name">GESTÃO ARQ</h4>
+                            <div class="venture-endorser">A BOSYN Company</div>
+                            <p class="venture-desc">SaaS de precisão operacional, orçamentos por etapa e cronogramas para arquitetos e escritórios.</p>
+                        </div>
+
+                        <!-- Future Ventures -->
+                        <div class="eco-venture-box" style="border-style: dashed;">
+                            <h4 class="venture-name" style="color: var(--color-primary);">NOVAS VENTURES</h4>
+                            <div class="venture-endorser">Incubação BOSYN</div>
+                            <p class="venture-desc">Estruturação de novas soluções de tecnologia e dados com a mesma governança e padrão de qualidade.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================================
+         8. PERSONALIDADE DA MARCA BANNER
+         ==================================================================== -->
+    <div class="brand-personality-banner">
+        <div class="personality-items-row">
+            <div class="personality-item">Moderna <span class="personality-dot">•</span></div>
+            <div class="personality-item">Confiável <span class="personality-dot">•</span></div>
+            <div class="personality-item">Humana <span class="personality-dot">•</span></div>
+            <div class="personality-item">Inteligente <span class="personality-dot">•</span></div>
+            <div class="personality-item">Inovadora</div>
+        </div>
+    </div>
+
+    <!-- ====================================================================
+         9. SEÇÃO DE CONTATO & CONVERSÃO
+         ==================================================================== -->
+    <section class="section-wrapper dark-bg" id="contato">
+        <div class="section-container">
+            <div class="contact-cta-card">
+                <!-- Contact Info Col -->
+                <div class="contact-info-col">
+                    <span class="section-tag dark" style="align-self: flex-start;">Fale Conosco</span>
+                    <h2 class="contact-headline">Conecte seu negócio ao padrão BOSYN.</h2>
+                    <p class="contact-desc">
+                        Seja para implantar o <strong>CONNECTASE</strong> em sua clínica, estruturar o <strong>GESTÃO ARQ</strong> em seu escritório ou discutir parcerias estratégicas com o grupo.
+                    </p>
+
+                    <div class="contact-channels">
+                        <a href="https://wa.me/551881290642?text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20com%20um%20especialista%20do%20BOSYN%20Group." target="_blank" rel="noopener noreferrer" class="contact-channel-link">
+                            <div class="channel-icon-circle">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div>
+                                <span style="display: block; font-size: 0.78rem; color: #93B5C6;">Atendimento Direto WhatsApp</span>
+                                <span>+55 (18) 98129-0642</span>
+                            </div>
+                        </a>
+
+                        <div class="contact-channel-link">
+                            <div class="channel-icon-circle">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <span style="display: block; font-size: 0.78rem; color: #93B5C6;">Sede Institucional</span>
+                                <span>Rua Sete de Setembro, 663 — Presidente Prudente, SP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Form -->
+                <div class="contact-form-col">
+                    <form id="bosynLeadForm">
+                        <div class="form-group">
+                            <label class="form-label" for="leadName">Seu Nome / Profissional</label>
+                            <input type="text" id="leadName" class="form-input" placeholder="Ex: Dr. Alexandre Figueiras" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="leadOrg">Empresa, Clínica ou Escritório</label>
+                            <input type="text" id="leadOrg" class="form-input" placeholder="Ex: Clínica Alpha / Escritório de Arquitetura">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="leadInterest">Área de Interesse Principal</label>
+                            <select id="leadInterest" class="form-select">
+                                <option value="CONNECTASE (Healthtech / Gestão Clínica)">CONNECTASE (Healthtech / Gestão Clínica)</option>
+                                <option value="GESTÃO ARQ (SaaS para Arquitetura)">GESTÃO ARQ (SaaS para Arquitetura)</option>
+                                <option value="Parcerias Corporativas & Tecnologia">Parcerias Corporativas & Tecnologia</option>
+                                <option value="BOSYN Venture Hub & Investimentos">BOSYN Venture Hub & Investimentos</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="leadMessage">Mensagem / Objetivo</label>
+                            <textarea id="leadMessage" class="form-textarea" rows="3" placeholder="Conte brevemente sobre o seu momento operacional ou projeto..."></textarea>
+                        </div>
+
+                        <button type="submit" id="bosynDirectWhatsAppBtn" class="btn-submit-whatsapp">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.59.21-1.09.15-1.19-.06-.1-.22-.16-.47-.28Z"/>
+                            </svg>
+                            <span>Iniciar Contato via WhatsApp</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================================
+         10. FOOTER INSTITUCIONAL
+         ==================================================================== -->
+    <footer class="site-footer">
+        <div class="footer-top-grid">
+            <!-- Brand info -->
+            <div class="footer-brand-col">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="font-family: var(--font-titles); font-size: 1.4rem; font-weight: 900; color: #FFFFFF; letter-spacing: 0.15em;">BOSYN</span>
+                </div>
+                <p class="footer-claim">
+                    Um ecossistema de soluções que se conectam para transformar o presente e construir o futuro.
+                </p>
+                <span class="footer-domain-badge">BOSYN.COM.BR</span>
+            </div>
+
+            <!-- Navegação -->
+            <div>
+                <h4 class="footer-col-title">Ecossistema</h4>
+                <ul class="footer-link-list">
+                    <li><a href="#solucoes-saas" class="footer-link-item">CONNECTASE Healthtech</a></li>
+                    <li><a href="#solucoes-saas" class="footer-link-item">GESTÃO ARQ</a></li>
+                    <li><a href="#ecossistema" class="footer-link-item">Venture Hub & Padrão</a></li>
+                    <li><a href="#setores" class="footer-link-item">Setores de Atuação</a></li>
+                </ul>
+            </div>
+
+            <!-- Institucional -->
+            <div>
+                <h4 class="footer-col-title">Institucional</h4>
+                <ul class="footer-link-list">
+                    <li><a href="#filosofia" class="footer-link-item">Filosofia BOSYN</a></li>
+                    <li><a href="#pilares" class="footer-link-item">Pilares de Rigor</a></li>
+                    <li><a href="#hero" class="footer-link-item">Governança Corporativa</a></li>
+                    <li><a href="#contato" class="footer-link-item">Relacionamento</a></li>
+                </ul>
+            </div>
+
+            <!-- Endereço & Local -->
+            <div>
+                <h4 class="footer-col-title">Localização</h4>
+                <p style="font-size: 0.88rem; line-height: 1.6; color: #93B5C6;">
+                    Rua Sete de Setembro, 663<br>
+                    Presidente Prudente — SP<br>
+                    Brasil
+                </p>
+                <div style="margin-top: 12px; font-family: var(--font-data); font-size: 0.78rem; color: var(--color-secondary);">
+                    WhatsApp: +55 (18) 98129-0642
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+            <div class="footer-bottom-copy">
+                BOSYN Group © 2026 | Build • Organize • Synchronize. Todos os direitos reservados.
+            </div>
+            <div class="footer-location">
+                CONNECTASE — A BOSYN Company | GESTÃO ARQ — A BOSYN Company
+            </div>
         </div>
     </footer>
 
-    <!-- Scripts de Sincronia -->
-    <script src="RaioX.js"></script>
+    <!-- Scripts de Interatividade -->
+    <script src="app.js"></script>
 </body>
 </html>

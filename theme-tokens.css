@@ -1,61 +1,125 @@
-/* 
-  BOSYN Holding Institutional - Theme Tokens
-  Follows: Diretriz Geral Master BOSYN
-  Author: Antigravity AI
-*/
+/* ==========================================================================
+   BOSYN HOLDING & ECOSSISTEMA - THEME TOKENS 2026
+   Identidade Visual Oficial: BUILD • ORGANIZE • SYNCHRONIZE
+   ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Roboto+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Noto+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:wght@400;500;600;700&display=swap');
 
 :root {
-    /* --- Colors --- */
-    --bg-offwhite: #F6F5F3;
-    --text-charcoal: #22262A;
-    --accent-neon: #00F0FF;
-    --black-logo: #0B0C0D;
-
-    /* --- Typography --- */
-    /* Titles 'Poppins' (SemiBold) */
-    --font-family-title: 'Poppins', sans-serif;
-    --font-weight-title: 600;
-
-    /* Body 'Source Sans 3' */
-    --font-family-body: 'Source Sans 3', sans-serif;
-    --font-weight-body-regular: 400;
-    --font-weight-body-bold: 700;
-
-    /* Data 'Roboto Mono' */
-    --font-family-data: 'Roboto Mono', monospace;
-    --font-weight-data: 500;
-
-    /* --- Golden Rule --- */
-    /* border-radius de 4px em todos os elementos clicáveis */
-    --radius-interactive: 4px;
+    /* --- PALETA DE CORES (DESIGN TOKENS OFICIAIS) --- */
+    --color-primary: #087E98;         /* Deep Teal */
+    --color-primary-hover: #06657a;
+    --color-primary-light: rgba(8, 126, 152, 0.12);
     
-    /* 0% de gradientes */
-    --bg-gradient-none: none;
-    --border-gradient-none: none;
+    --color-secondary: #20D5EF;       /* Vibrant Cyan */
+    --color-secondary-glow: rgba(32, 213, 239, 0.4);
+    --color-secondary-soft: rgba(32, 213, 239, 0.12);
 
-    /* --- Spacing Scale (Base 8px) --- */
-    --space-unit: 8px;
-    --space-xs: 4px;   /* 0.5x */
-    --space-sm: 8px;   /* 1x */
-    --space-md: 16px;  /* 2x */
-    --space-lg: 24px;  /* 3x */
-    --space-xl: 32px;  /* 4x */
-    --space-2xl: 48px; /* 6x */
-    --space-3xl: 64px; /* 8x */
-    --space-4xl: 80px; /* 10x */
+    --color-accent: #05945B;          /* CTA / Emerald Green */
+    --color-accent-hover: #047d4d;
+    --color-accent-light: rgba(5, 148, 91, 0.12);
+
+    --color-urgency: #F96E15;         /* Warm Orange */
+    --color-destructive: #DC2828;     /* Crimson Red */
+
+    /* Superfícies & Fundos */
+    --color-bg: #EBFCFE;              /* Soft Cyan Tint oficial */
+    --color-surface: #FFFFFF;         /* White Card Surface */
+    --color-surface-hover: #F8FDFF;
+    --color-surface-alt: #F1FAFC;
+    
+    /* Dark Theme / Hero Premium */
+    --color-bg-dark: #060E18;         /* Deep Space Navy */
+    --color-bg-dark-surface: #0B1726; /* Dark Card Surface */
+    --color-bg-dark-border: rgba(32, 213, 239, 0.15);
+    --color-bg-dark-card: rgba(11, 23, 38, 0.85);
+
+    /* Textos & Tipografia */
+    --color-foreground: #164D64;      /* Deep Slate Blue Text oficial */
+    --color-text-title: #092635;      /* High-contrast Title */
+    --color-text-muted: #527A8A;      /* Subtitle / Descriptive text */
+    --color-text-dark: #F0F9FB;       /* Text for dark surfaces */
+    --color-text-dark-muted: #93B5C6; /* Secondary text for dark surfaces */
+
+    /* Elementos de Interface */
+    --color-muted: #DCF0F4;           /* Soft muted container */
+    --color-border: #CCDCE1;          /* Border / Input oficial */
+    --color-border-focus: #087E98;
+
+    /* Gradientes da Marca */
+    --gradient-brand: linear-gradient(135deg, #20D5EF 0%, #087E98 55%, #1A365D 100%);
+    --gradient-brand-glow: linear-gradient(135deg, rgba(32, 213, 239, 0.8) 0%, rgba(8, 126, 152, 0.8) 100%);
+    --gradient-dark-hero: radial-gradient(circle at 50% 20%, #0d2538 0%, #060e18 80%);
+    --gradient-card-dark: linear-gradient(145deg, rgba(16, 32, 51, 0.9) 0%, rgba(8, 18, 30, 0.95) 100%);
+    --gradient-card-light: linear-gradient(145deg, #ffffff 0%, #f4fbfe 100%);
+    --gradient-accent: linear-gradient(135deg, #05945B 0%, #087E98 100%);
+
+    /* --- TIPOGRAFIA --- */
+    --font-titles: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-body: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-data: 'Roboto Mono', monospace;
+
+    /* --- SOMBRAS & ELEVAÇÃO --- */
+    --shadow-sm: 0 2px 4px rgba(9, 38, 53, 0.04);
+    --shadow-md: 0 8px 20px rgba(9, 38, 53, 0.08);
+    --shadow-lg: 0 16px 36px rgba(9, 38, 53, 0.12);
+    --shadow-glow-cyan: 0 0 30px rgba(32, 213, 239, 0.25);
+    --shadow-glow-teal: 0 0 35px rgba(8, 126, 152, 0.35);
+
+    /* --- BORDAS & RAIOS --- */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-full: 9999px;
+
+    /* --- TRANSIÇÕES --- */
+    --transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Global clickable elements reset according to Golden Rule */
-button, 
-.button, 
-a.btn, 
-input[type="submit"], 
-input[type="button"],
-select,
-textarea,
-input:not([type="checkbox"]):not([type="radio"]) {
-    border-radius: var(--radius-interactive);
-    background-image: var(--bg-gradient-none) !important;
+/* Base Global Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-foreground);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-titles);
+    color: var(--color-text-title);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: var(--font-titles);
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+code, .font-mono {
+    font-family: var(--font-data);
 }
