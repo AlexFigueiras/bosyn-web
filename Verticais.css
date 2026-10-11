@@ -27,6 +27,11 @@
     background: #FFFFFF;
 }
 
+a.vertical-card {
+    text-decoration: none;
+    color: inherit;
+}
+
 .card-tag {
     display: inline-block;
     font-family: var(--font-data);

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MedFlex | Gestão clínica inteligente — um sistema BOSYN</title>
+    <meta name="description" content="MedFlex: prontuário de enfermagem estruturado (NANDA-I/NIC/NOC), agenda com booking público e cobrança recorrente para clínicas e consultórios. LGPD desde o primeiro dia.">
+
+    <link rel="stylesheet" href="../theme-tokens.css">
+    <link rel="stylesheet" href="software.css">
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="sw-nav">
+        <div class="sw-nav-inner">
+            <a href="index.html" class="sw-nav-brand">
+                <svg width="28" height="28" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0" y="0" width="20" height="20" fill="var(--black-logo)" />
+                    <rect x="24" y="0" width="20" height="20" fill="var(--black-logo)" />
+                    <rect x="0" y="24" width="20" height="20" fill="var(--black-logo)" />
+                    <rect x="24" y="24" width="20" height="20" fill="var(--black-logo)" />
+                    <rect x="48" y="24" width="20" height="20" fill="var(--black-logo)" />
+                    <rect x="0" y="48" width="20" height="20" fill="var(--black-logo)" />
+                    <rect x="24" y="48" width="20" height="20" fill="var(--black-logo)" />
+                </svg>
+                <span class="sw-nav-brand-text">BOSYN <span>Sistemas</span></span>
+            </a>
+            <a href="index.html" class="sw-breadcrumb">← Todos os sistemas</a>
+            <div class="sw-nav-links">
+                <a href="medflex.html" class="is-active">MedFlex</a>
+                <a href="multiflow.html">Multiflow</a>
+                <a href="gestaoarq.html">GestãoArq</a>
+                <a href="#solucao">O sistema</a>
+                <a href="#planos">Planos</a>
+                <a href="https://wa.me/551881290642?text=Ol%C3%A1%2C%20quero%20uma%20demonstra%C3%A7%C3%A3o%20do%20MedFlex." target="_blank" rel="noopener noreferrer" class="sw-nav-cta">Agendar demonstração</a>
+            </div>
+            <button class="sw-nav-toggle" aria-label="Abrir menu">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HERO -->
+        <section class="sw-hero">
+            <div class="sw-hero-inner">
+                <div>
+                    <span class="sw-badge">MedFlex · Sistema para clínicas e consultórios</span>
+                    <h1 class="sw-h1">Sua clínica <span class="sw-highlight">documentada, agendada e cobrada</span> — sem depender de planilha ou caderno.</h1>
+                    <p class="sw-sub">MedFlex organiza a assistência de enfermagem (SAE), a agenda e o financeiro da sua clínica em um só sistema multi-tenant, com prontuário aderente às taxonomias NANDA-I, NIC e NOC e conformidade LGPD desde a primeira linha de código.</p>
+                    <div class="sw-cta-row">
+                        <a href="https://wa.me/551881290642?text=Ol%C3%A1%2C%20quero%20uma%20demonstra%C3%A7%C3%A3o%20do%20MedFlex." target="_blank" rel="noopener noreferrer" class="sw-btn sw-btn-primary">Agendar demonstração</a>
+                        <a href="#solucao" class="sw-btn sw-btn-secondary">Ver como funciona</a>
+                    </div>
+                    <div class="sw-trust-row">
+                        <span>PII criptografada em repouso</span>
+                        <span>Isolamento por clínica</span>
+                        <span>Booking público protegido</span>
+                    </div>
+                </div>
+
+                <div class="sw-mock">
+                    <div class="sw-mock-bar">
+                        <span class="sw-mock-dot"></span><span class="sw-mock-dot"></span><span class="sw-mock-dot"></span>
+                    </div>
+                    <div class="sw-mock-body">
+                        <div class="sw-mock-title">Agenda de hoje — Clínica Vitalis</div>
+                        <div class="sw-mock-row"><span>08:30 · Ana Ribeiro — Triagem</span><span class="sw-mock-badge ok">concluída</span></div>
+                        <div class="sw-mock-row"><span>09:15 · Marcos Lima — Evolução</span><span class="sw-mock-badge pending">pendente</span></div>
+                        <div class="sw-mock-row"><span>10:00 · Booking público — Beatriz Souza</span><span class="sw-mock-badge info">confirmado</span></div>
+                        <div class="sw-mock-row"><span>Fatura #2291 — plano mensal</span><span class="sw-mock-badge ok">paga</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sw-stats-strip">
+                <div class="sw-stat">
+                    <div class="sw-stat-value">+5k</div>
+                    <div class="sw-stat-label">anamneses processadas por mês</div>
+                </div>
+                <div class="sw-stat">
+                    <div class="sw-stat-value">99.9%</div>
+                    <div class="sw-stat-label">de uptime da plataforma</div>
+                </div>
+                <div class="sw-stat">
+                    <div class="sw-stat-value">LGPD</div>
+                    <div class="sw-stat-label">auditoria de consentimento desde o cadastro</div>
+                </div>
+                <div class="sw-stat">
+                    <div class="sw-stat-value">24/7</div>
+                    <div class="sw-stat-label">suporte técnico direto</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAIN -->
+        <section class="sw-section" style="padding-bottom:0;">
+            <div class="sw-section-inner">
+                <div class="sw-section-head center">
+                    <div class="sw-kicker">O que te trava hoje</div>
+                    <h2 class="sw-h2">Prontuário em papel não escala — e não protege ninguém.</h2>
+                </div>
+            </div>
+        </section>
+        <section class="sw-section" style="padding-top:0;">
+            <div class="sw-section-inner">
+                <div class="sw-pain-grid">
+                    <article class="sw-pain-col">
+                        <div class="sw-pain-tag">Sem padronização</div>
+                        <h3 class="sw-pain-title">Cada profissional anota do seu jeito</h3>
+                        <p class="sw-pain-text">Sem taxonomia SAE estruturada, a evolução do paciente vira texto livre — difícil de auditar, comparar ou defender numa eventual fiscalização.</p>
+                    </article>
+                    <article class="sw-pain-col">
+                        <div class="sw-pain-tag">Agenda no telefone</div>
+                        <h3 class="sw-pain-title">Falta e reagendamento consomem a recepção</h3>
+                        <p class="sw-pain-text">No-show está entre os maiores desafios do setor. Sem confirmação automática e booking público, cada furo na agenda é receita que não volta.</p>
+                    </article>
+                    <article class="sw-pain-col">
+                        <div class="sw-pain-tag">Dado sensível exposto</div>
+                        <h3 class="sw-pain-title">Dado de saúde sem criptografia é risco jurídico</h3>
+                        <p class="sw-pain-text">Prontuário é dado sensível pela LGPD (art. 11). Planilha compartilhada e sistema sem RLS por clínica deixam a sua operação exposta.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOLUÇÃO -->
+        <section class="sw-section" id="solucao">
+            <div class="sw-section-inner">
+                <div class="sw-section-head">
+                    <div class="sw-kicker">A solução</div>
+                    <h2 class="sw-h2">Tudo que a sua clínica precisa, em um único sistema.</h2>
+                    <p class="sw-section-sub">MedFlex já nasce multi-tenant: cada clínica enxerga só os seus dados, com regra de acesso validada em cada rota — não só na tela.</p>
+                </div>
+
+                <div class="sw-feature-grid">
+                    <div class="sw-feature-card">
+                        <div class="sw-feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+                        <h3 class="sw-feature-title">Anamnese inteligente</h3>
+                        <p class="sw-feature-text">Formulários dinâmicos de anamnese e evolução aderentes a NANDA-I, NIC e NOC, com apoio de IA na sugestão de diagnósticos.</p>
+                    </div>
+                    <div class="sw-feature-card">
+                        <div class="sw-feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="15" rx="1" stroke="currentColor" stroke-width="1.6"/><path d="M4 9h16" stroke="currentColor" stroke-width="1.6"/></svg></div>
+                        <h3 class="sw-feature-title">Agenda + booking público</h3>
+                        <p class="sw-feature-text">Grade de slots por profissional e link de agendamento público protegido contra bots, sem exigir login do paciente.</p>
+                    </div>
+                    <div class="sw-feature-card">
+                        <div class="sw-feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="1.6"/></svg></div>
+                        <h3 class="sw-feature-title">Segurança & LGPD</h3>
+                        <p class="sw-feature-text">PII criptografada em repouso, isolamento por clínica e log de auditoria com hash no aceite dos termos de uso.</p>
+                    </div>
+                    <div class="sw-feature-card">
+                        <div class="sw-feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.2" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c1.2-4 4-6 7-6s5.8 2 7 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+                        <h3 class="sw-feature-title">Multi-profissional</h3>
+                        <p class="sw-feature-text">Permissões por cargo (RBAC) para médicos, enfermeiros, recepção e administração convivendo no mesmo ambiente.</p>
+                    </div>
+                    <div class="sw-feature-card">
+                        <div class="sw-feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 4h10l6 6v10H4V4z" stroke="currentColor" stroke-width="1.6"/><path d="M14 4v6h6" stroke="currentColor" stroke-width="1.6"/></svg></div>
+                        <h3 class="sw-feature-title">Documentos e PDFs</h3>
+                        <p class="sw-feature-text">Upload de exames e mídia, com geração automática de PDF de laudos e evoluções para impressão ou envio.</p>
+                    </div>
+                    <div class="sw-feature-card">
+                        <div class="sw-feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 12h4l3 8 4-16 3 8h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                        <h3 class="sw-feature-title">Billing recorrente</h3>
+                        <p class="sw-feature-text">Assinatura via Stripe Checkout, com planos, limites de pacientes/profissionais e portal de faturas da própria clínica.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMO FUNCIONA -->
+        <section class="sw-section">
+            <div class="sw-section-inner">
+                <div class="sw-section-head">
+                    <div class="sw-kicker">Implantação</div>
+                    <h2 class="sw-h2">Da assinatura ao primeiro paciente atendido.</h2>
+                </div>
+                <div class="sw-steps">
+                    <div class="sw-step">
+                        <h3 class="sw-step-title">Cadastro da clínica</h3>
+                        <p class="sw-step-text">Sua clínica ganha o próprio espaço isolado, com equipe e permissões configuradas em minutos.</p>
+                    </div>
+                    <div class="sw-step">
+                        <h3 class="sw-step-title">Pacientes e equipe</h3>
+                        <p class="sw-step-text">Cadastro de pacientes, profissionais envolvidos e materiais/insumos usados na triagem.</p>
+                    </div>
+                    <div class="sw-step">
+                        <h3 class="sw-step-title">Rotina no sistema</h3>
+                        <p class="sw-step-text">Agenda, anamnese e evolução do dia a dia — com booking público recebendo pacientes novos sozinho.</p>
+                    </div>
+                    <div class="sw-step">
+                        <h3 class="sw-step-title">Financeiro automático</h3>
+                        <p class="sw-step-text">Faturamento recorrente, relatórios de custo de materiais e dashboard executivo sempre atualizados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROOF -->
+        <section class="sw-proof">
+            <div class="sw-section-inner" style="max-width:1200px; margin:0 auto;">
+                <div class="sw-section-head">
+                    <div class="sw-kicker">Confiança técnica</div>
+                    <h2 class="sw-h2">Segurança não é feature — é fundação.</h2>
+                </div>
+                <div class="sw-proof-grid">
+                    <div class="sw-proof-card">
+                        <div class="sw-proof-value">RLS</div>
+                        <div class="sw-proof-label">isolamento por clínica em nível de banco</div>
+                    </div>
+                    <div class="sw-proof-card">
+                        <div class="sw-proof-value">AES-256</div>
+                        <div class="sw-proof-label">criptografia de dados sensíveis em repouso</div>
+                    </div>
+                    <div class="sw-proof-card">
+                        <div class="sw-proof-value">Turnstile</div>
+                        <div class="sw-proof-label">booking público protegido contra bots</div>
+                    </div>
+                    <div class="sw-proof-card">
+                        <div class="sw-proof-value">Clickwrap</div>
+                        <div class="sw-proof-label">log auditável de aceite dos termos (IP, data, hash)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICING -->
+        <section class="sw-section" id="planos">
+            <div class="sw-section-inner">
+                <div class="sw-section-head center">
+                    <div class="sw-kicker">Planos</div>
+                    <h2 class="sw-h2">Um plano para cada tamanho de clínica.</h2>
+                    <p class="sw-section-sub">Valores sob consulta, conforme número de profissionais e pacientes ativos da sua clínica.</p>
+                </div>
+                <div class="sw-pricing-grid">
+                    <div class="sw-plan">
+                        <div class="sw-plan-name">Básico</div>
+                        <p class="sw-plan-tagline">Para consultórios iniciando a digitalização do prontuário.</p>
+                        <div class="sw-plan-price">Sob consulta</div>
+                        <ul class="sw-plan-list">
+                            <li>Até 500 pacientes ativos</li>
+                            <li>Até 3 profissionais</li>
+                            <li>Agenda + booking público</li>
+                            <li>Anamnese SAE completa</li>
+                        </ul>
+                        <a href="https://wa.me/551881290642?text=Ol%C3%A1%2C%20quero%20saber%20o%20valor%20do%20plano%20B%C3%A1sico%20do%20MedFlex." target="_blank" rel="noopener noreferrer" class="sw-btn sw-btn-secondary">Falar sobre este plano</a>
+                    </div>
+                    <div class="sw-plan is-highlighted">
+                        <span class="sw-plan-highlight-tag">Mais escolhido</span>
+                        <div class="sw-plan-name">Pro</div>
+                        <p class="sw-plan-tagline">Para clínicas com mais de uma especialidade e equipe maior.</p>
+                        <div class="sw-plan-price">Sob consulta</div>
+                        <ul class="sw-plan-list">
+                            <li>Até 5.000 pacientes ativos</li>
+                            <li>Até 15 profissionais</li>
+                            <li>Tudo do Básico</li>
+                            <li>Relatórios e dashboard completo</li>
+                        </ul>
+                        <a href="https://wa.me/551881290642?text=Ol%C3%A1%2C%20quero%20saber%20o%20valor%20do%20plano%20Pro%20do%20MedFlex." target="_blank" rel="noopener noreferrer" class="sw-btn sw-btn-primary">Falar sobre este plano</a>
+                    </div>
+                    <div class="sw-plan">
+                        <div class="sw-plan-name">Enterprise</div>
+                        <p class="sw-plan-tagline">Para redes de clínicas e hospitais de maior porte.</p>
+                        <div class="sw-plan-price">Sob consulta</div>
+                        <ul class="sw-plan-list">
+                            <li>Pacientes e profissionais ilimitados</li>
+                            <li>Tudo do Pro</li>
+                            <li>Suporte prioritário</li>
+                        </ul>
+                        <a href="https://wa.me/551881290642?text=Ol%C3%A1%2C%20quero%20saber%20o%20valor%20do%20plano%20Enterprise%20do%20MedFlex." target="_blank" rel="noopener noreferrer" class="sw-btn sw-btn-secondary">Falar sobre este plano</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="sw-section">
+            <div class="sw-section-inner">
+                <div class="sw-section-head center">
+                    <div class="sw-kicker">Perguntas frequentes</div>
+                    <h2 class="sw-h2">Antes de decidir, tire as dúvidas mais comuns.</h2>
+                </div>
+                <div class="sw-faq">
+                    <details class="sw-faq-item">
+                        <summary>O MedFlex é compatível com a LGPD?</summary>
+                        <p>Sim. Dados de saúde são tratados como dado sensível desde a arquitetura: criptografia em repouso, isolamento por clínica e log auditável de consentimento no cadastro.</p>
+                    </details>
+                    <details class="sw-faq-item">
+                        <summary>Consigo migrar os prontuários que já tenho em planilha ou outro sistema?</summary>
+                        <p>Sim, fazemos a importação assistida dos seus dados de pacientes existentes durante a implantação — sem digitar tudo de novo.</p>
+                    </details>
+                    <details class="sw-faq-item">
+                        <summary>O paciente precisa criar conta para agendar?</summary>
+                        <p>Não. O agendamento público funciona sem login, protegido contra bots, e a posse da reserva é validada por token individual.</p>
+                    </details>
+                    <details class="sw-faq-item">
+                        <summary>Dá para trocar de plano depois?</summary>
+                        <p>Sim, o upgrade e downgrade de plano são feitos direto no painel de faturamento, sem precisar abrir chamado.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="sw-cta-final">
+            <div class="sw-cta-final-inner">
+                <h2 class="sw-h2">Pronto para tirar sua clínica da planilha?</h2>
+                <p class="sw-section-sub">Agende uma demonstração e veja o MedFlex rodando com um caso parecido com o seu.</p>
+                <a href="https://wa.me/551881290642?text=Ol%C3%A1%2C%20quero%20uma%20demonstra%C3%A7%C3%A3o%20do%20MedFlex." target="_blank" rel="noopener noreferrer" class="sw-btn sw-btn-primary sw-mt-lg">Agendar demonstração</a>
+                <p class="sw-cta-microcopy">Fale com um especialista técnico, não com um vendedor.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="sw-footer">
+        <div class="sw-footer-inner">
+            <div class="sw-footer-links">
+                <a href="index.html">Todos os sistemas</a>
+                <a href="multiflow.html">Multiflow</a>
+                <a href="gestaoarq.html">GestãoArq</a>
+                <a href="../index.html">BOSYN Group</a>
+            </div>
+            <p class="sw-footer-legal">MedFlex é um sistema BOSYN © 2026 · Presidente Prudente, SP</p>
+        </div>
+    </footer>
+
+    <script src="software.js"></script>
+</body>
+</html>
