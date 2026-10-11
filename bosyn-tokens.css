@@ -1,0 +1,243 @@
+/* ==========================================================================
+   BOSYN HOLDING & ECOSSISTEMA - BOSYN DESIGN TOKENS (v1.0 - 2026)
+   Canônico: Ecossistema BOSYN (BUILD • ORGANIZE • SYNCHRONIZE)
+   Toda variável leva o prefixo --bs- (token "surface" = var(--bs-surface)).
+   Tema claro: padrão. Tema escuro: [data-theme="escuro"] no <html>.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Noto+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:wght@400;500;600;700&display=swap');
+
+:root,
+[data-theme="claro"] {
+  /* --- Superfícies & Fundos --- */
+  --bs-surface-page: #EBFCFE;
+  --bs-surface: #FFFFFF;
+  --bs-surface-alt: #F1FAFC;
+  --bs-surface-muted: #DCF0F4;
+  --bs-surface-footer: #040910;
+
+  /* --- Textos & Tipografia (Ink) --- */
+  --bs-ink: #164D64;
+  --bs-ink-title: #092635;
+  --bs-ink-muted: #527A8A;
+
+  /* --- Bordas & Foco (Contraste Acessível >= 3:1) --- */
+  --bs-border: #CCDCE1;
+  --bs-border-control: var(--bs-ink-muted);
+  --bs-focus-ring: #087E98;
+
+  /* --- Rodapé --- */
+  --bs-footer-ink: #D1E5EE;
+  --bs-footer-ink-muted: #93B5C6;
+  --bs-footer-line: rgba(255, 255, 255, 0.06);
+
+  /* --- Cores Institucionais BOSYN --- */
+  --bs-bosyn-teal: #087E98;
+  --bs-bosyn-teal-strong: #06657a;
+  --bs-bosyn-cyan: #20D5EF;
+  --bs-bosyn-navy: #1B3B6F;
+  --bs-bosyn-emerald: #05945B;
+
+  /* --- Ações & Status --- */
+  --bs-whatsapp: #25D366;
+  --bs-on-whatsapp: #092635;
+  --bs-warning: #F96E15;
+  --bs-on-warning: #092635;
+  --bs-danger: #DC2828;
+  --bs-info: #087E98;
+  --bs-sync: #05945B;
+
+  /* --- Marca Primária Padrão (BOSYN) --- */
+  --bs-brand: var(--bs-bosyn-teal);
+  --bs-brand-strong: var(--bs-bosyn-teal-strong);
+  --bs-on-brand: #FFFFFF;
+  --bs-brand-soft: rgba(8, 126, 152, 0.12);
+  --bs-brand-text: var(--bs-bosyn-teal);
+
+  /* --- Tipografia Oficial --- */
+  --bs-font-titles: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --bs-font-body: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --bs-font-data: 'Roboto Mono', monospace;
+
+  /* --- Espaçamento (Escala 4px) --- */
+  --bs-space-1: 0.25rem;
+  --bs-space-2: 0.5rem;
+  --bs-space-3: 0.75rem;
+  --bs-space-4: 1rem;
+  --bs-space-5: 1.25rem;
+  --bs-space-6: 1.5rem;
+  --bs-space-8: 2rem;
+  --bs-space-10: 2.5rem;
+  --bs-space-12: 3rem;
+  --bs-space-16: 4rem;
+
+  /* --- Raios de Borda --- */
+  --bs-radius-sm: 6px;
+  --bs-radius-md: 10px;
+  --bs-radius-lg: 16px;
+  --bs-radius-xl: 24px;
+  --bs-radius-full: 9999px;
+
+  /* --- Sombras & Elevação --- */
+  --bs-shadow-sm: 0 1px 2px rgba(9, 38, 53, 0.05);
+  --bs-shadow-md: 0 4px 12px rgba(9, 38, 53, 0.08);
+  --bs-shadow-lg: 0 12px 28px rgba(9, 38, 53, 0.12);
+  --bs-shadow-glow-cyan: 0 0 24px rgba(32, 213, 239, 0.28);
+  --bs-shadow-glow-teal: 0 0 28px rgba(8, 126, 152, 0.32);
+
+  /* --- Transições --- */
+  --bs-transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  --bs-transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --bs-transition-smooth: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* --- Gradientes Canônicos --- */
+  --bs-gradient-brand: linear-gradient(135deg, #20D5EF 0%, #087E98 55%, #1B3B6F 100%);
+  --bs-gradient-accent: linear-gradient(135deg, #05945B 0%, #087E98 100%);
+}
+
+/* --- Tema Escuro Oficial --- */
+[data-theme="escuro"] {
+  --bs-surface-page: #060E18;
+  --bs-surface: #0B1726;
+  --bs-surface-alt: #0D1B2A;
+  --bs-surface-muted: rgba(32, 213, 239, 0.12);
+  --bs-surface-footer: #040910;
+  --bs-ink: #F0F9FB;
+  --bs-ink-title: #FFFFFF;
+  --bs-ink-muted: #93B5C6;
+  --bs-border: rgba(32, 213, 239, 0.15);
+  --bs-border-control: rgba(32, 213, 239, 0.35);
+  --bs-focus-ring: #20D5EF;
+  --bs-sync: #4ADE80;
+  --bs-brand-soft: rgba(32, 213, 239, 0.15);
+  --bs-brand-text: var(--bs-bosyn-cyan);
+  --bs-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --bs-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.45);
+  --bs-shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.6);
+}
+
+/* --- Variações de Marca dos Produtos --- */
+.bs-brand-connectase {
+  --bs-brand: #0077BB;
+  --bs-brand-strong: #005A8E;
+  --bs-on-brand: #FFFFFF;
+  --bs-brand-soft: rgba(0, 119, 187, 0.12);
+  --bs-brand-text: #0077BB;
+}
+[data-theme="escuro"] .bs-brand-connectase {
+  --bs-brand-text: #20D3EE;
+}
+
+.bs-brand-flow {
+  --bs-brand: #25D366;
+  --bs-brand-strong: #128C7E;
+  --bs-on-brand: #092635;
+  --bs-brand-soft: rgba(37, 211, 102, 0.12);
+  --bs-brand-text: #128C7E;
+}
+
+.bs-brand-gestao-arq {
+  --bs-brand: #F59E0B;
+  --bs-brand-strong: #D97706;
+  --bs-on-brand: #092635;
+  --bs-brand-soft: rgba(245, 158, 11, 0.12);
+  --bs-brand-text: #B45309;
+}
+
+/* --- COMPATIBILIDADE REVERSA / MIGRATION BRIDGE (Fase 2) --- */
+:root {
+  --color-primary: var(--bs-bosyn-teal);
+  --color-primary-hover: var(--bs-bosyn-teal-strong);
+  --color-primary-light: var(--bs-brand-soft);
+  --color-secondary: var(--bs-bosyn-cyan);
+  --color-secondary-glow: rgba(32, 213, 239, 0.4);
+  --color-secondary-soft: rgba(32, 213, 239, 0.12);
+  --color-accent: var(--bs-bosyn-emerald);
+  --color-accent-hover: #047d4d;
+  --color-accent-light: rgba(5, 148, 91, 0.12);
+  --color-urgency: var(--bs-warning);
+  --color-destructive: var(--bs-danger);
+  --color-bg: var(--bs-surface-page);
+  --color-surface: var(--bs-surface);
+  --color-surface-hover: #F8FDFF;
+  --color-surface-alt: var(--bs-surface-alt);
+  --color-bg-dark: #060E18;
+  --color-bg-dark-surface: #0B1726;
+  --color-bg-dark-border: rgba(32, 213, 239, 0.15);
+  --color-bg-dark-card: rgba(11, 23, 38, 0.85);
+  --color-foreground: var(--bs-ink);
+  --color-text-title: var(--bs-ink-title);
+  --color-text-muted: var(--bs-ink-muted);
+  --color-text-dark: var(--bs-ink);
+  --color-text-dark-muted: var(--bs-ink-muted);
+  --color-muted: var(--bs-surface-muted);
+  --color-border: var(--bs-border);
+  --color-border-focus: var(--bs-focus-ring);
+  --gradient-brand: var(--bs-gradient-brand);
+  --gradient-brand-glow: linear-gradient(135deg, rgba(32, 213, 239, 0.8) 0%, rgba(8, 126, 152, 0.8) 100%);
+  --gradient-dark-hero: radial-gradient(circle at 50% 20%, #0d2538 0%, #060e18 80%);
+  --gradient-card-dark: linear-gradient(145deg, rgba(16, 32, 51, 0.9) 0%, rgba(8, 18, 30, 0.95) 100%);
+  --gradient-card-light: linear-gradient(145deg, #ffffff 0%, #f4fbfe 100%);
+  --gradient-accent: var(--bs-gradient-accent);
+  --font-titles: var(--bs-font-titles);
+  --font-body: var(--bs-font-body);
+  --font-data: var(--bs-font-data);
+  --shadow-sm: var(--bs-shadow-sm);
+  --shadow-md: var(--bs-shadow-md);
+  --shadow-lg: var(--bs-shadow-lg);
+  --shadow-glow-cyan: var(--bs-shadow-glow-cyan);
+  --shadow-glow-teal: var(--bs-shadow-glow-teal);
+  --radius-sm: var(--bs-radius-sm);
+  --radius-md: var(--bs-radius-md);
+  --radius-lg: var(--bs-radius-lg);
+  --radius-xl: var(--bs-radius-xl);
+  --radius-full: var(--bs-radius-full);
+  --transition-fast: var(--bs-transition-fast);
+  --transition-base: var(--bs-transition-base);
+  --transition-smooth: var(--bs-transition-smooth);
+}
+
+/* Base Global Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--bs-font-body);
+  background-color: var(--bs-surface-page);
+  color: var(--bs-ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--bs-font-titles);
+  color: var(--bs-ink-title);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--bs-font-titles);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+code, .font-mono {
+  font-family: var(--bs-font-data);
+}
