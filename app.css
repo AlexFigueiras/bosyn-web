@@ -151,7 +151,7 @@
 .hero-section {
     position: relative;
     min-height: 100vh;
-    background: var(--bs-surface-page);
+    background: #060E18;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -251,7 +251,7 @@
 
 .hero-description {
     font-size: 1.15rem;
-    color: var(--bs-ink-muted);
+    color: #93B5C6;
     line-height: 1.7;
     margin-bottom: 32px;
     max-width: 580px;
@@ -472,6 +472,8 @@
     background: rgba(255, 255, 255, 0.06);
     color: var(--bs-bosyn-cyan);
     border: 1px solid rgba(32, 213, 239, 0.2);
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 /* --- SECTION GENERAL STYLING --- */
@@ -1310,7 +1312,14 @@
     margin-bottom: 20px;
 }
 
-.form-label {
+/* bs-field tem max-width: 360px no DS; no formulário os campos acompanham a largura do botão. */
+.contact-form-col .bs-field {
+    max-width: none;
+    width: 100%;
+}
+
+.form-label,
+.contact-form-col .bs-label {
     display: block;
     font-size: 0.85rem;
     font-weight: 600;
@@ -1450,6 +1459,12 @@
     color: #6C8D9E;
 }
 
+.footer-endorse-line {
+    margin-top: 6px;
+    font-size: 0.75rem;
+    color: var(--bs-footer-ink-muted);
+}
+
 .footer-location {
     font-family: var(--bs-font-data);
     color: #93B5C6;
@@ -1500,8 +1515,8 @@
 }
 
 @media (max-width: 768px) {
-    .nav-links, .nav-cta-btn {
-        display: none;
+    .nav-links, .nav-cta-wrap, .nav-cta-btn {
+        display: none !important;
     }
 
     .mobile-menu-toggle {
