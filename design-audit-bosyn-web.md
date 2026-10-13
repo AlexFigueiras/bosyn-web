@@ -2250,7 +2250,7 @@ não encontrado
 </button>
 
 <!-- SaaS Action Buttons (Demonstração & Simulação) -->
-<a href="https://wa.me/551881290642?text=Ol%C3%A1" target="_blank" rel="noopener noreferrer" class="btn-saas-primary">
+<a href="https://wa.me/5518981290642?text=Ol%C3%A1" target="_blank" rel="noopener noreferrer" class="btn-saas-primary">
     <span>Solicitar Demonstração Clínica</span>
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
 </a>
@@ -2266,7 +2266,7 @@ não encontrado
 </button>
 
 <!-- CTA Component Standalone Button (de CTA.html) -->
-<a href="https://wa.me/551881290642?text=Ol%C3%A1" target="_blank" rel="noopener noreferrer" class="cta-button">
+<a href="https://wa.me/5518981290642?text=Ol%C3%A1" target="_blank" rel="noopener noreferrer" class="cta-button">
     <span>Falar via WhatsApp (+55 18 98129-0642)</span>
 </a>
 ```

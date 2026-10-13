@@ -285,7 +285,7 @@ function initContactWhatsAppForm() {
             const interest = document.getElementById('leadInterest')?.value || 'BOSYN Group';
             const message = document.getElementById('leadMessage')?.value || '';
 
-            const phone = "551881290642";
+            const phone = "5518981290642";
             let text = `Olá, me chamo *${name}*`;
             if (organization) text += ` da empresa/escritório *${organization}*`;
             text += `.\nTenho interesse em: *${interest}*.`;
